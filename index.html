@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="myForm" >
+    <input id="month" type="text"><button id="count" type="submit" onclick="countDays()">Tính số ngày</button>
+</form>
+
+<script>
+    function countDays() {
+        let m = parseFloat(document.getElementById("month").value);
+        switch (m) {
+            case 2:
+                alert("Tháng 2 có 28 hoặc 29 ngày!");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert("Tháng " + m + " có 30 ngày");
+                break;
+            default:
+                alert("Tháng " + m + " có 31 ngày");
+        }
+    }
+</script>
+
+</body>
+</html>
